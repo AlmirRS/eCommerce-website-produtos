@@ -18,6 +18,7 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
+    padding: 20px;
 }
 .container .card{
     width: 100%;
@@ -27,7 +28,30 @@ body{
     position: relative;
     width: 100%;
     height: 310px;
+    overflow: hidden;
 }
+.container .card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+    transform-origin: right;
+}
+.container .card:hover .imgBx img{
+    transform: scale(1.5);
+}
+.container .card .content{
+    padding: 10px;
+}
+.container .card .content .podutoNome h3{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin: 5px 0;
 
 
+}
  /* https://youtu.be/Kir_B9mkLig    Para continuar clique aqui no minuto 7:00 */
