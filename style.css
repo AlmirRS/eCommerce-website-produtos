@@ -43,6 +43,48 @@ body{
 .container .card:hover .imgBx img{
     transform: scale(1.5);
 }
+.action{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.action li{
+    position: relative;
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    cursor: pointer;
+}
+.action li:hover{
+    background-color: #ff2020;
+    color: #fff;
+
+
+}
+.action li span{
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    padding: 4px 60px;
+    background: #fff;
+    color: #333;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+}
+.action li:hover span{
+    opacity: 1;
+
+}
 .container .card .content{
     padding: 10px;
 }
@@ -51,7 +93,21 @@ body{
     font-weight: 500;
     color: #333;
     margin: 5px 0;
-
-
 }
- /* https://youtu.be/Kir_B9mkLig    Para continuar clique aqui no minuto 7:00 */
+.container .card .content .price-rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .card .content .price-rating h2{
+    font-size: 20px;
+    color: #ff2020;
+    font-weight: 500;    
+}
+.container .card .content .price-rating .fa{
+    color: #FFD513;
+    cursor: pointer;
+}
+.container .card .content .price-rating .fa.grey{
+    color: #ccc;
+}
