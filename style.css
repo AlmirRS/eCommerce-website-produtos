@@ -59,6 +59,17 @@ body{
     align-items: center;
     margin: 4px;
     cursor: pointer;
+    transition: transform 0.5s;
+    transform: translateX(60px);
+}
+.action li:nth-child(2){
+    transition-delay: 0.15s;
+}
+.action li:nth-child(3){
+    transition-delay: 0.3s;
+}
+.container .card:hover .action li{
+    transform: translateX(0px);
 }
 .action li:hover{
     background-color: #ff2020;
@@ -70,9 +81,9 @@ body{
     position: absolute;
     right: 50px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateX(-20px);
     white-space: nowrap;
-    padding: 4px 60px;
+    padding: 4px 6px;
     background: #fff;
     color: #333;
     font-weight: 500;
@@ -80,10 +91,21 @@ body{
     border-radius: 4px;
     pointer-events: none;
     opacity: 0;
+    transition: 0.5s;
 }
 .action li:hover span{
+    transform: translateY(-50%) translateX(-20px);
     opacity: 1;
-
+}
+.action li span::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    transform: translateY(-50%) rotate(45deg);
 }
 .container .card .content{
     padding: 10px;
